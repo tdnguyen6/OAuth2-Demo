@@ -20,7 +20,14 @@ if (queryString != "") {
       console.log(`Code is ${urlParams.get("code")}`);
       fetch(
         "https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token?client_id=d32d2e713ddf613284c2&client_secret=a85d684c0fc52f12dbf56171a3d231eea610c671&code=" + code, { method: "POST" }
-      ).then(res => res.text()).then(ans => console.log(ans));
+      ).then(res => res.text()).then(ans => {
+        let tokenStr = ans.split("&")[0].split("=")[1];
+        fetch("https://api.github.com/user" {
+          headers {
+            "Authorization" : `token ${tokenStr}`
+          }
+        })
+      });
     }
   }
 }
