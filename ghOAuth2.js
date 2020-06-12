@@ -9,5 +9,5 @@ ghSignIn.onclick = () => {
         "Origin": "*",
       },
     }
-  ).then(res => res.text()).then(ans => console.log(ans));
+  );
 };
