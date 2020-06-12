@@ -6,7 +6,7 @@ ghSignIn.onclick = () => {
     "https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/authorize?client_id=d32d2e713ddf613284c2&state=hihihi",
     {
       headers: {
-        Origin: "*",
+        "Origin": "*",
       },
     }
   ).then(res => res.text()).then(ans => console.log(ans));
