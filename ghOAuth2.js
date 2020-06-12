@@ -28,7 +28,7 @@ if (queryString != "") {
           let tokenStr = ans.split("&")[0].split("=")[1];
           fetch("https://api.github.com/user", {
             headers: {
-              Authorization: `token ${tokenStr}`,
+              "Authorization": `token ${tokenStr}`,
             },
           })
           .then(res => res.json())
