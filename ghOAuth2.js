@@ -2,7 +2,7 @@ let ghSignIn = document.getElementById("gh-signIn");
 let ghSignOut = document.getElementById("gh-signOut");
 
 ghSignIn.onclick = () => {
-  let state = (new Date()).toString().replace(/\s/g, "");
+  let state = (new Date()).getTime();
   location.href =
     "https://github.com/login/oauth/authorize?client_id=d32d2e713ddf613284c2&state=" +
     state;
