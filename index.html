@@ -7,8 +7,7 @@
   <meta name="google-signin-client_id"
     content="560035296789-m3f1e8kc3nlrplnukil785h87um4gtf7.apps.googleusercontent.com">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0"
-    nonce="M2gA5sCK"></script>
+  <script src="fb_sdk.js"></script>
   <script src="ggOAuth2.js" defer></script>
   <script src="ghOAuth2.js" defer></script>
   <title>Document</title>
@@ -21,11 +20,9 @@
   <button id="gh-signIn">Sign in with GitHub</button>
   <button id="gh-signOut">Sign out GitHub</button>
 
-  <div id="fb-root"></div>
+  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+  </fb:login-button>
 
-  <div class="fb-login-button" data-size="large" data-button-type="continue_with" data-layout="default"
-    data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div>
-    
 </body>
 
 </html>
