@@ -21,3 +21,12 @@ window.fbAsyncInit = function () {
   fjs.parentNode.insertBefore(js, fjs);
 })(document, "script", "facebook-jssdk");
 
+FB.getLoginStatus(function(response) {
+  statusChangeCallback(response);
+});
+
+function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}
