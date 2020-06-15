@@ -39,6 +39,12 @@ function testAPI() {
     document.getElementById("status").innerHTML =
       "Thanks for logging in, " + response.name + "!";
   });
+  FB.api("/me/picture", function (response) {
+    if (response && !response.error) {
+      /* handle the result */
+      console.log(response);
+    }
+  });
 }
 
 function statusChangeCallback(response) {
