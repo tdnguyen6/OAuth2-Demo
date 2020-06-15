@@ -32,7 +32,10 @@ if (queryString != "") {
             },
           })
           .then(res => res.json())
-          .then(json => console.log(json));
+          .then(json => {
+            console.log(json);
+            history.replaceState(null, null, location.pathname);
+          });
         });
     }
   }
